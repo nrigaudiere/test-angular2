@@ -7,3 +7,7 @@ $mainFontSize : 18px !important;
 body {
 	font-size: $mainFontSize;
 }
+
+input {
+	@include border-radius(5px);
+}
