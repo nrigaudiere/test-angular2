@@ -80,7 +80,7 @@ module.exports.connections = {
     user: 'YOUR_POSTGRES_USER',
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
-  }
+  },
 
 
   /***************************************************************************
@@ -89,4 +89,11 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
 
+  couchDB: {                                                                       
+    adapter: 'sails-couchdb-orm',
+    host: 'localhost',
+    port: 5984,
+    username: 'bananabreaduser',
+    password: 'chicaBanana2016'                                 
+  }
 };
