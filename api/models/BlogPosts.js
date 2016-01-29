@@ -11,8 +11,9 @@ module.exports = {
   		title: {
   			type:'string'
   		},
-  		list: {
-  			type:'string'
+  		category: {
+  			type:'string',
+        enum: ['Lifestyle', 'Food', 'Workout', 'Gear', 'Technical Skills', 'Tutorials'],
   		},
   		date: {
   			type:'date'
@@ -20,8 +21,8 @@ module.exports = {
   		content: {
   			type: 'string'
   		},
-  		picture: {
-  			type:'url'
+  		pictureUrl: {
+  			type:'string'
   		}
   }
 };

@@ -14,8 +14,8 @@ module.exports = {
   		content: {
   			type: 'string'
   		},
-  		picture: {
-  			type:'url'
+  		pictureUrl: {
+  			type:'string'
   		}
   }
 };

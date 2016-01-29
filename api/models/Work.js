@@ -14,12 +14,12 @@ module.exports = {
   		content: {
   			type: 'string'
   		},
-  		categories: {
+  		category: {
   			type: 'string',
   			enum: ['Portrait', 'Landscape', 'Lighting'],
   		},
-  		picture: {
-  			type:'url'
+  		pictureUrl: {
+  			type:'string'
   		}
   }
 
