@@ -15,9 +15,6 @@ module.exports = {
   			type:'string',
         enum: ['Lifestyle', 'Food', 'Workout', 'Gear', 'Technical Skills', 'Tutorials'],
   		},
-  		date: {
-  			type:'date'
-  		},
   		content: {
   			type: 'string'
   		},
