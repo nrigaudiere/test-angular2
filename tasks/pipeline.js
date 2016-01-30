@@ -36,6 +36,10 @@ var jsFilesToInject = [
 
   // Use the "exclude" operator to ignore files
   // '!js/ignore/these/files/*.js'
+  
+  'js/dependencies/angular2/Rx.umd.js',
+  'js/dependencies/angular2/angular2-polyfills.js',
+  'js/dependencies/angular2s/angular2-all.umd.js'
 ];
 
 
