@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 						'rxjs/bundles/Rx.umd.js', 
 					 	'angular2/bundles/angular2-polyfills.js',
 					 	'angular2/bundles/angular2-all.umd.js'
-					]
+					],
 				dest: '.tmp/public/js/dependencies/angular2'
 			}]
 		},
