@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 					 	'angular2/bundles/angular2-polyfills.js',
 					 	'angular2/bundles/angular2-all.umd.js'
 					],
-				dest: '.tmp/public/js/dependencies/angular2'
+				dest: '.tmp/public/js/dependencies'
 			}]
 		},
 		build: {

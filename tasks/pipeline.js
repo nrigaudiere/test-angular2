@@ -26,20 +26,21 @@ var jsFilesToInject = [
 
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
+  'js/dependencies/angular2/bundles/angular2-polyfills.js',
+  'js/dependencies/rxjs/bundles/*.js',
+  'js/dependencies/angular2/bundles/angular2-all.umd.js',
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
-  'js/**/*.js',
+  'js/**/*.js'
 
   // Use the "exclude" operator to ignore files
   // '!js/ignore/these/files/*.js'
+
   
-  'js/dependencies/angular2/Rx.umd.js',
-  'js/dependencies/angular2/angular2-polyfills.js',
-  'js/dependencies/angular2s/angular2-all.umd.js'
 ];
 
 
