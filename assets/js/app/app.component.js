@@ -1,8 +1,8 @@
 (function(app) {
-  app.AppComponent =
+  app.homeTitle =
 	ng.core.Component({
-	  selector: 'perave',
-	  template: '<h1>My First Angular 2 App</h1>'
+	  selector: 'homeTitle',
+	  template: '<h1>Banana Bread</h1><h2>Photographer</h2><h3>San Francisco - Paris - Barcelona</h3>'
 	})
 	.Class({
 	  constructor: function() {}
