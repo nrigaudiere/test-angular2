@@ -1,7 +1,7 @@
 (function(app) {
   app.homeTitle =
 	ng.core.Component({
-	  selector: 'homeTitle',
+	  selector: 'hometitle',
 	  template: '<h1>Banana Bread</h1><h2>Photographer</h2><h3>San Francisco - Paris - Barcelona</h3>'
 	})
 	.Class({

@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 				// src: ['**/*.!(coffee|less)'],
 				src: ['**/*.!(coffee|less|scss|sass)'],
 				dest: '.tmp/public'
-			}, 
+			},
 
 			//Add angular2
 			{
@@ -35,7 +35,31 @@ module.exports = function(grunt) {
 					 	'angular2/bundles/angular2-all.umd.js'
 					],
 				dest: '.tmp/public/js/dependencies'
-			}]
+			},
+
+			//Add Bootstrap SaSS JS files
+			{
+				expand:true,
+				cwd: './node_modules',
+				src:[
+						'bootstrap-sass/assets/javascripts/bootstrap-sprockets.js',
+						'bootstrap-sass/assets/javascripts/bootstrap.js'
+					],
+				dest: '.tmp/public/js/dependencies'
+			},
+
+			//Add Bootstrap SaSS .scss files
+			{
+				expand:true,
+				cwd: './node_modules/bootstrap-sass/assets/stylesheets/',
+				src:[
+						'*.scss',
+						'bootstrap/*.scss',
+						'bootstrap/mixins/*.scss'
+					],
+				dest: './assets/styles'
+			}
+			]
 		},
 		build: {
 			files: [{

@@ -1,13 +1,42 @@
 /* SaSS Base */
 
-
 /** Variables */
-$mainFontSize : 18px !important;
+$mainFontSize : 25px !important;
+
+$mainFontFamily     : 'Montserrat', sans-serif;
+$mainFontFamilyBold : 'Montserrat Bold', sans-serif;
+
+/* Fonts */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* Selectors */
+
+html {
+	 -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth; 
+    overflow-x: auto;
+}
 
 body {
 	font-size: $mainFontSize;
+	font-family: $mainFontFamily;
 }
 
 input {
 	@include border-radius(5px);
+}
+
+
+hometitle {
+	text-align:center;
+	text-transform: uppercase;
 }
