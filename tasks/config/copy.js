@@ -37,6 +37,16 @@ module.exports = function(grunt) {
 				dest: '.tmp/public/js/dependencies'
 			},
 
+			//Add JQuery
+			{
+				expand:true,
+				cwd: './node_modules',
+				src:[
+						'jquery/dist/*'
+					],
+				dest: '.tmp/public/js/dependencies'
+			},
+
 			//Add Bootstrap SaSS JS files
 			{
 				expand:true,

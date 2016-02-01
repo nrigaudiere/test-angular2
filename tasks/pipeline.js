@@ -31,15 +31,21 @@ var jsFilesToInject = [
   'js/dependencies/angular2/bundles/angular2-polyfills.js',
   'js/dependencies/rxjs/bundles/*.js',
   'js/dependencies/angular2/bundles/angular2-all.umd.js',
+  'js/app/app.component.js',
+  'js/app/boot.js',
+
+  // Loading JQuery
+  'js/dependencies/jquery/dist/jquery.min.js'
 
   // Loading Bootstrap
+  
 
   // Dependencies like jQuery, or Angular are brought in here
-  'js/dependencies/**/*.js',
+  // 'js/dependencies/**/*.js',
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
-  'js/**/*.js'
+  // 'js/**/*.js'
 
   // Use the "exclude" operator to ignore files
   // '!js/ignore/these/files/*.js'
