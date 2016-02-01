@@ -2,7 +2,7 @@
   app.homeTitle =
 	ng.core.Component({
 	  selector: 'hometitle',
-	  template: '<h1>Banana Bread</h1><h2>Photographer</h2><h3>San Francisco - Paris - Barcelona</h3><button type="text" class="center-block">Contact Me</button>'
+	  template: '<h1>Banana Bread</h1><h2>Photographer</h2><h4>San Francisco - Paris - Barcelona</h4><button type="text" class="center-block">Contact Me</button>'
 	})
 	.Class({
 	  constructor: function() {}

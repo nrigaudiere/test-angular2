@@ -35,13 +35,41 @@
   /* some CSS here */
 }
 
+
+@media screen and (max-width:768px) {
+	
+	.navbar-brand {
+		padding:10px;
+		
+		img {
+			padding:0px;	
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.navbar-brand {
+		display: none;
+	} 
+
+	.navbar {
+		text-align: center;
+	}
+
+	.navbar-nav {
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+	}
+}
+
 @media screen and (max-width:1024px) {
 	
 	.icon-bar {
 		border-radius: 25px;
     	background-color: white;
 	}
-	
+
 }
 /* #### Desktops #### */
 @media screen and (min-width: 1024px){

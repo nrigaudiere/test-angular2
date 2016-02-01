@@ -52,7 +52,6 @@ module.exports = function(grunt) {
 				expand:true,
 				cwd: './node_modules',
 				src:[
-						'bootstrap-sass/assets/javascripts/bootstrap-sprockets.js',
 						'bootstrap-sass/assets/javascripts/bootstrap.js'
 					],
 				dest: '.tmp/public/js/dependencies'

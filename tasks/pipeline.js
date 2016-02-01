@@ -35,10 +35,11 @@ var jsFilesToInject = [
   'js/app/boot.js',
 
   // Loading JQuery
-  'js/dependencies/jquery/dist/jquery.min.js'
+  'js/dependencies/jquery/dist/jquery.min.js',
+  'js/custom/customJQuery.js',
 
   // Loading Bootstrap
-  
+  'js/dependencies/bootstrap-sass/assets/javascripts/bootstrap.js',
 
   // Dependencies like jQuery, or Angular are brought in here
   // 'js/dependencies/**/*.js',
