@@ -7,9 +7,14 @@ $mainFontFamily     : 'Montserrat', sans-serif;
 $mainFontFamilyBold : 'Montserrat Bold', sans-serif;
 $fontColor 			: #000;
 $homeFontColor 	    : #fff;
+$hoverColor         : #ddd;
+$grey               : #555;
 
+$xxsmall            : 0.5em;
 $xsmall             : 0.6em;
 $small              : 0.8em;
+$medium             : 1em;
+$large              : 2.5em;
 $xlarge             : 4em;
 
 /* Fonts */
@@ -38,18 +43,31 @@ body {
 	color : $fontColor;
 }
 
+a {
+	color : $fontColor;
+}
+
+a:hover, a:active , a:focus {
+	text-decoration: none;
+	color : $hoverColor;
+}
+
 input {
 	@include border-radius(5px);
 }
 
 button {
-	@include border-radius(5px);
+	@include border-radius(2px);
 	background:none;
-	border: solid 2px #fff;
+	border: solid 2px rgba(255,255,255,0.5);
 }
 
 section {
 	height:100vh;
+	
+	h2 {
+		text-align:center;
+	}
 }
 
 h1 {
@@ -99,6 +117,16 @@ h1 {
 		background-size: cover;
 	}
 
+	#parallax {
+		background: url(../images/backgrounds/parallax.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		    
+		height: 65vh;
+	}
+
 
 	/** END OF SECTIONS **/
 	
@@ -117,17 +145,39 @@ h1 {
 
 		h1 {
 			font-size:$xlarge;
-			margin-top:20vh;
+			margin-top:30vh;
+		}
+
+		h2 {
+			font-size:$large;
 		}
 
 		h4 {
 			font-family: $mainFontFamily;
 		}
 
-		button {
-			text-transform: uppercase !important;
-			font-size: $xsmall;
-			padding:8px;
-			
+		a, a:hover {
+    		color: $homeFontColor !important;
+
+			button {
+				text-transform: uppercase !important;
+				font-size: $xxsmall;
+				padding: 9px 20px 7px 20px;
+	    		margin-top: 5em;
+			}
 		}
 	}
+
+	/** END OF HOME **/
+	
+	/** DESCRIPTION **/
+	
+	#description {
+		text-align:center;
+		
+		p {
+			color : $grey;
+		}
+	}
+
+	/** END OF DESCRIPTION **/
