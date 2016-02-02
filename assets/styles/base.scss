@@ -178,6 +178,34 @@ h1 {
 		p {
 			color : $grey;
 		}
+
+		img {
+			max-width:100%;
+			width:100%;
+		}
 	}
 
 	/** END OF DESCRIPTION **/
+	
+	/** BOOTSTRAP TWEEKING **/
+	
+	.no-gutters, {
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+
+
+		[class^="col-"],
+		[class*="col-"] {
+			padding-right: 0 !important;
+			padding-left: 0 !important;
+		}
+	}
+
+	.no-margins {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+
+	/** END OF BOOTSTRAP TWEEKING **/

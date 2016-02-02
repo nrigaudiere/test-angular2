@@ -1,13 +1,9 @@
 
-  (function() {
-    var container = $('.main');
+var container = $('.main');
 
-    $('a').click(function() {
-      var target = $($.attr(this, 'href'));
-      container.animate({
-          scrollTop: container.scrollTop() + target.offset().top
-      }, 250);
-      return false;
-    });
-  }());
-  
+$('a').click(function() {
+  var target = $($.attr(this, 'href'));
+
+  $('html,body').animate({scrollTop: container.scrollTop() + target.offset().top});
+  return false;
+});
