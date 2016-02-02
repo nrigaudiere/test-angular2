@@ -5,3 +5,11 @@
 	-webkit-border-radius: $amount; 
     -moz-border-radius: $amount; 
 }
+@mixin default-border($pixel, $orientation) {
+	@if $orientation == all {
+		border : solid $pixel rgba(255,255,255,0.5);
+	}
+	@else {
+		border-#{$orientation} : solid $pixel rgba(255,255,255,0.5);
+	}
+}

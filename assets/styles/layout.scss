@@ -44,7 +44,7 @@ $xlarge             : 3em;
 @media screen and (max-width:768px) {
 	
 	.navbar-brand {
-		padding:10px;
+		padding:10px 15px;
 		
 		img {
 			padding:0px;	
@@ -71,7 +71,7 @@ $xlarge             : 3em;
 @media screen and (max-width:1024px) {
 	
 
-	h1 {
+	hometitle h1 {
 		font-size: $xlarge;
 	}
 
