@@ -26,4 +26,9 @@ $(document).ready(function(){
 // Carousel
 $(document).ready(function() {
     $('.carousel').carousel({interval: 7000});
+
+    $('#homeCarousel').bind('slide.bs.carousel', function (e) {
+    console.log('SLIDE!');
+	});
   });
+

@@ -5,6 +5,7 @@
 	-webkit-border-radius: $amount; 
     -moz-border-radius: $amount; 
 }
+
 @mixin default-border($pixel, $orientation) {
 	@if $orientation == all {
 		border : solid $pixel rgba(255,255,255,0.5);
@@ -12,4 +13,20 @@
 	@else {
 		border-#{$orientation} : solid $pixel rgba(255,255,255,0.5);
 	}
+}
+
+@mixin background-fixed($url) {
+	background: url($url) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@mixin transition($type, $duration, $anim) {
+	-webkit-transition: $type $duration $anim !important;
+	-moz-transition: $type $duration $anim !important;
+	-ms-transition: $type $duration $anim !important;
+	-o-transition: $type $duration $anim !important;
+	transition: $type $duration $anim !important;
 }
