@@ -8,10 +8,11 @@ $mainFontFamilyBold : 'Montserrat Bold', sans-serif;
 $fontColor 			: #000;
 $homeFontColor 	    : #fff;
 $hoverColor         : #ddd;
-$grey               : #555;
+$grey               : #777;
 
 $xxsmall            : 0.5em;
 $xsmall             : 0.6em;
+$xmsmall            : 0.7em;
 $small              : 0.8em;
 $medium             : 1em;
 $large              : 2.5em;
@@ -47,7 +48,7 @@ a {
 	color : $fontColor;
 }
 
-a:hover, a:active , a:focus {
+a:hover , a:focus {
 	text-decoration: none;
 	color : $hoverColor;
 }
@@ -68,6 +69,7 @@ section {
 	h2 {
 		text-align:center;
 		font-family: $mainFontFamilyBold;
+		margin-top : 70px;
 	}
 }
 
@@ -175,10 +177,14 @@ h1 {
 	
 	#description {
 		text-align:center;
+		height: initial;
 		
 		p {
 			color : $grey;
-			font-size: $small; 
+			font-size: $xmsmall;
+			padding-top:15px;
+			line-height: 23px;
+    		padding-bottom: 30px;
 		}
 
 		img {
@@ -210,12 +216,20 @@ h1 {
 		margin-left: 0 !important;
 	}
 
+	.active a {
+		color: $hoverColor !important;
+	}
+
 	/** END OF BOOTSTRAP TWEEKING **/
 	
 	/** MISC **/
 
-	.separation {
+	.separator {
 		@include default-border(1px, bottom);
+		height:1px;
+		background-color: rgb(211, 211, 211);
+		margin-top : 15px;
+		margin-bottom:15px;
 	}
 
 	/** END OF MISC **/
