@@ -107,6 +107,11 @@ h1 {
 		@include default-border(1px, bottom);
 	}
 
+	.navbar-scrolled {
+		@include gradient-vertical($start-color: #555, $end-color: transparent, $start-percent: 0%, $end-percent: 100%);
+		transition: all 1.5s ease-in-out;
+	}
+
 
 	/** END OF NAV **/
 	
@@ -217,7 +222,7 @@ h1 {
 	}
 
 	.active a {
-		color: $hoverColor !important;
+		color: $grey !important;
 	}
 
 	/** END OF BOOTSTRAP TWEEKING **/
