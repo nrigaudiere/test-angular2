@@ -13,7 +13,7 @@ $('a').click(function() {
 
 $(document).ready(function(){
 	$(window).scroll(function() { // check if scroll event happened
-		if ($(document).scrollTop() > reachedDescription.top) { // check if user scrolled more than 50 from top of the browser window
+		if ($(document).scrollTop() >= reachedDescription.top) { // check if user scrolled more than 50 from top of the browser window
 			$(".navbar-fixed-top").addClass("navbar-scrolled"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
 		} else {
 			// $(".navbar-fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
@@ -21,3 +21,9 @@ $(document).ready(function(){
 		}
 	});
 });
+
+
+// Carousel
+$(document).ready(function() {
+    $('.carousel').carousel({interval: 7000});
+  });

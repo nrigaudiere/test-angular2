@@ -15,6 +15,7 @@ $xsmall             : 0.6em;
 $xmsmall            : 0.7em;
 $small              : 0.8em;
 $medium             : 1em;
+$mediumlg           : 2em;
 $large              : 2.5em;
 $xlarge             : 4em;
 
@@ -65,11 +66,22 @@ button {
 
 section {
 	height:100vh;
+	text-align:center;
+	background-color:#fff;
 	
 	h2 {
 		text-align:center;
 		font-family: $mainFontFamilyBold;
-		margin-top : 70px;
+		margin-top : 80px;
+		font-size:$mediumlg;
+	}
+
+	p {
+		color : $grey;
+		font-size: $xmsmall;
+		padding-top:15px;
+		line-height: 23px;
+		padding-bottom: 30px;
 	}
 }
 
@@ -118,11 +130,7 @@ h1 {
 	/** SECTIONS **/
 	
 	#home {
-		background: url(../images/backgrounds/home.jpg) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
+		background-color:transparent;
 	}
 
 	#parallax {
@@ -158,6 +166,7 @@ h1 {
 
 		h2 {
 			font-size:$large;
+			margin-top:initial;
 		}
 
 		h4 {
@@ -166,12 +175,12 @@ h1 {
 
 		a, a:hover {
     		color: $homeFontColor !important;
+	    	margin-top: 5em;
 
 			button {
 				text-transform: uppercase !important;
 				font-size: $xxsmall;
 				padding: 9px 20px 7px 20px;
-	    		margin-top: 5em;
 			}
 		}
 	}
@@ -181,16 +190,7 @@ h1 {
 	/** DESCRIPTION **/
 	
 	#description {
-		text-align:center;
 		height: initial;
-		
-		p {
-			color : $grey;
-			font-size: $xmsmall;
-			padding-top:15px;
-			line-height: 23px;
-    		padding-bottom: 30px;
-		}
 
 		img {
 			max-width:100%;
@@ -199,6 +199,19 @@ h1 {
 	}
 
 	/** END OF DESCRIPTION **/
+	
+	/** WORKS **/
+	
+	#works {
+		height: initial;
+
+		h5 {
+			color : $grey;
+			padding-top:10px;
+		}
+	}
+
+	/** END OF WORKS **/
 	
 	/** BOOTSTRAP TWEEKING **/
 	
@@ -230,11 +243,93 @@ h1 {
 	/** MISC **/
 
 	.separator {
-		@include default-border(1px, bottom);
+		@include default-border(2px, bottom);
 		height:1px;
 		background-color: rgb(211, 211, 211);
 		margin-top : 15px;
 		margin-bottom:15px;
 	}
+
+	.carousel { 
+		z-index: -99;
+		background-color: black;
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+
+	}
+	.carousel .item {
+		position: fixed; 
+		opacity: 0;
+		left:0 !important;
+		transition-property: opacity;
+		width: 100%; height: 100vh;
+		-webkit-transition: opacity 1.5s ease-in-out;
+		-moz-transition: opacity 1.5s ease-in-out;
+		-ms-transition: opacity 1.5s ease-in-out;
+		-o-transition: opacity 1.5s ease-in-out;
+		transition: opacity 1.5s ease-in-out;
+		height: 100vh;
+	}
+	.carousel .one {
+		background: url(../images/backgrounds/home.jpg);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.carousel .two {
+		background: url(../images/backgrounds/marseille.jpg);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.carousel .three {
+		background: url(../images/backgrounds/montreal.jpg);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.carousel .active {
+		opacity: 1 !important;
+	}
+
+	.carousel .left {
+		opacity: 1 !important;
+		-webkit-transition: opacity 1.5s ease-out !important;
+		-moz-transition: opacity 1.5s ease-out !important;
+		-ms-transition: opacity 1.5s ease-out !important;
+		-o-transition: opacity 1.5s ease-out !important;
+		transition: opacity 1.5s ease-out !important;
+	}
+	
+// .carousel-inner {
+// 	.item,
+//         .active.left,
+//         .active.right {
+//             opacity: 0;
+//         }
+
+//      .active,
+//         .next.left,
+//         .prev.right {
+//             opacity: 1;
+//         }
+
+//         .next,
+//         .prev,
+//         .active.left,
+//         .active.right {
+//             left: 0;
+//             transform: translate3d(0, 0, 0);
+//         }
+//     }
+
+//     .carousel-control {
+//         z-index: 2;
+//     }
 
 	/** END OF MISC **/

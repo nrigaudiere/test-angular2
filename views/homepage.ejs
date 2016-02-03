@@ -1,9 +1,21 @@
 <!-- Default home page -->
 <section id="home">
+    <div id="homeCarousel" class="carousel container carousel-fade slide no-margins">
+        <div class="carousel-inner">
+                <div class="active item one"></div>
+                <div class="item two"></div>
+                <div class="item three"></div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1">
                 <homeTitle></homeTitle>
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
             </div>
         </div>
     </div>
