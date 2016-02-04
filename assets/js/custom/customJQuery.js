@@ -28,7 +28,29 @@ $(document).ready(function() {
     $('.carousel').carousel({interval: 7000});
 
     $('#homeCarousel').bind('slide.bs.carousel', function (e) {
-    console.log('SLIDE!');
+
+    	if($('.carousel-inner').children('.active').length != 0) {
+    		var index = $('.carousel-inner .active').attr("data");
+    		
+    	}
+
+    		// $('.carousel-controllers div').attr('data-slide-to')
 	});
   });
 
+
+
+// Instagram
+
+$('.instagram').on('willLoadInstagram', function(event, options) {
+    console.log(options);
+  });
+  $('.instagram').on('didLoadInstagram', function(event, response) {
+    console.log(response);
+  });
+  $('.instagram').instagram({
+    hash: 'photographer',
+    clientId:'5e17e41d90ec4613ad722af6cc0f8f1e',
+    // code:'ab74a752bf5e4171a06f499f80db52de'
+    accessToken: '2896544984.5e17e41.13df3b4f314048a6ad5a001a1dc7f379'
+  });

@@ -6,6 +6,15 @@
     -moz-border-radius: $amount; 
 }
 
+@mixin colored-border($pixel, $orientation, $color) {
+	@if $orientation == all {
+		border : solid $pixel $color;
+	}
+	@else {
+		border-#{$orientation} : solid $pixel $color;
+	}
+}
+
 @mixin default-border($pixel, $orientation) {
 	@if $orientation == all {
 		border : solid $pixel rgba(255,255,255,0.5);
