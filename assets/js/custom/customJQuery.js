@@ -56,41 +56,7 @@ $('.instagram').instagram({
 
 
 // Google Maps
-// function initMap(){
 
-// 	var styleArray = [{
-// 		featureType: "all",
-// 		elementType: "all",
-// 		stylers: [
-// 			{ saturation: -100 } // <-- THIS
-// 		]
-// 	}];
-
-// 	var mapCanvas = document.getElementById('map');
-// 	var mapOptions = {
-// 		center: new google.maps.LatLng(48.871082,2.339652),
-// 		zoom:15,
-// 		scrollwheel:false,
-// 		styles: styleArray,
-// 		mapTypeId:google.maps.MapTypeId.ROADMAP
-// 	}
-
-// 	var map = new google.maps.Map(mapCanvas,mapOptions)
-// 	var myLatLng = new google.maps.LatLng(48.869487,2.339695);
-// 	var marker = new google.maps.Marker(
-// 		{
-// 			position:myLatLng,
-// 			map:map,
-// 			draggable:false,
-// 			icon:'http://www.srpf.fr/wp-content/uploads/2015/10/logo_micro.png',
-// 			title:'S.R.P.F : Société de Revalorisation du Patrimoine Français'
-// 		});
-
-// 	var contentString = '<div id="content">S.R.P.F : Société de Revalorisation du Patrimoine Français</div>';
-// 	var infowindow=new google.maps.InfoWindow({content:contentString});
-// 	infowindow.open(map,marker);
-// }
-// 
 function initMap() {
 
 	var styleArray = [{
@@ -109,7 +75,7 @@ function initMap() {
 	});
 
 	var contentString = '<div id="content">BANANA BREAD</div>';
-	
+
 	var infowindow=new google.maps.InfoWindow({
 			content:contentString,
 			position: myLatLng
