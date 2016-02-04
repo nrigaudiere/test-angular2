@@ -1,6 +1,9 @@
-/* SaSS Base */
+/*------------------*/ 
+/*	  SaSS Base     */
+/*------------------*/ 
 
-/** Variables */
+
+/** Variables **/
 $mainFontSize : 20px;
 
 $mainFontFamily     : 'Montserrat', sans-serif;
@@ -20,6 +23,7 @@ $large              : 2.5em;
 $xlarge             : 3em;
 $xxlarge            : 4em;
 
+
 /* Fonts */
 
 @font-face {
@@ -31,6 +35,7 @@ $xxlarge            : 4em;
   font-family: 'Montserrat Bold';
   src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
 }
+
 
 /* Selectors */
 
@@ -130,10 +135,13 @@ footer {
 		transition: all 1.5s ease-in-out;
 	}
 
-
+	/**------------**/
 	/** END OF NAV **/
+	/**------------**/
 	
+	/**----------**/
 	/** SECTIONS **/
+	/**----------**/
 	
 	#home {
 		background-color:transparent;
@@ -149,11 +157,13 @@ footer {
 		background-color: rgb(242, 242, 242);
 	}
 
-
+	/**-----------------**/
 	/** END OF SECTIONS **/
-	
+	/**-----------------**/
 
+	/**------**/
 	/** HOME **/
+	/**------**/
 
 	hometitle {
 		text-align:center;
@@ -222,6 +232,17 @@ footer {
 
 	/** END OF WORKS **/
 	
+	/** TESTIMONIALS **/	
+	
+	#testimonials {
+		h5 {
+			color : $grey;
+			padding-top:10px;
+		}
+	}
+
+	/** END OF TESTIMONIALS **/	
+	
 	/** BOOTSTRAP TWEEKING **/
 	
 	.no-gutters, {
@@ -250,6 +271,21 @@ footer {
 	/** END OF BOOTSTRAP TWEEKING **/
 	
 	/** MISC **/
+	
+	.map-container {
+		position: relative;
+    	width: 500px;
+    	height: 500px;
+		#map {
+			position: absolute;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    margin: 0;
+		    padding: 0;
+		}
+	}
 
 	.separator {
 		@include default-border(2px, bottom);
@@ -259,7 +295,7 @@ footer {
 		margin-bottom:15px;
 	}
 
-	.carousel { 
+	#homeCarousel { 
 		z-index: -99;
 		background-color: black;
 		width: 100%;
@@ -323,6 +359,58 @@ footer {
 		.active {
 			@include colored-border(2px, bottom, $homeFontColor);
 		}
+	}
+
+	.quote {
+	    color: rgba(0,0,0,.1);
+	    text-align: center;
+	    margin-bottom: 30px;
+	}
+
+	#testimonialCarousel {
+
+		.carousel {
+			padding-bottom: 60px;
+
+			.carousel-inner {
+				.item {
+					opacity: 0;
+					-webkit-transition-property: opacity;
+					-ms-transition-property: opacity;
+					transition-property: opacity;
+				}
+
+				.active {
+					opacity: 1;
+					-webkit-transition-property: opacity;
+					-ms-transition-property: opacity;
+					transition-property: opacity;
+				}
+			} 
+
+			.carousel-indicators {
+				bottom: 10px;
+
+				> li {
+					background-color: #e84a64;
+					border: none;
+				}
+			}
+		}
+
+		blockquote {
+			text-align: center;
+			border: none;
+		}
+
+		.profile-circle {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			border-radius: 100px;
+		}
+
+
 	}
 
 	/** END OF MISC **/
