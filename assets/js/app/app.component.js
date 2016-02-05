@@ -21,11 +21,15 @@
 
 	app.contactForm =
 	ng.core.Component({
-		selector : 'contactForm',
-		template : "templates/contactform.component.html"
+		selector : 'contactform',
+		templateUrl : 'contactform.component.html'
 	})
 	.Class({
-		constructor: function() {}
+		constructor: function() {}, 
+
+		diagnostic: function() {
+        	return JSON.stringify(this.model);
+      	},
 	});
 
 

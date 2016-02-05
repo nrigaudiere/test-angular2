@@ -95,10 +95,24 @@ h1 {
 	margin-top: 5%;
 }
 
+h5 {
+	color : $grey !important;
+	padding-top:10px;
+}
+
 footer {
 	background-color:#fff;
 	text-align:center;
+    font-size: 0.7em;
+    color: rgba(150, 150, 150, 0.6);
+	padding-bottom: 20px;
+	
+	small {
+		@include colored-border(2px, top, rgba(200, 200, 200, 0.5));
+		padding : 20px 25vw 0px 25vw;
+	}
 }
+
 
 
 	/** NAV **/
@@ -224,10 +238,6 @@ footer {
 	#works {
 		height: initial;
 
-		h5 {
-			color : $grey;
-			padding-top:10px;
-		}
 	}
 
 	/** END OF WORKS **/
@@ -235,13 +245,39 @@ footer {
 	/** TESTIMONIALS **/	
 	
 	#testimonials {
-		h5 {
-			color : $grey;
-			padding-top:10px;
-		}
+		
 	}
 
 	/** END OF TESTIMONIALS **/	
+	
+	/** ABOUT **/	
+	
+	#about {
+
+		h4 {
+			display: inline-block;
+			font-size: $xmsmall; 
+			hr {
+				border:0;
+			    @include colored-border(2px, top, rgba(200, 200, 200, 0.5));
+			    display: inline-block;
+			    width: 65px;
+			    margin: 4px 10px 4px 10px;
+			}
+		}
+
+		.me {
+			img { 
+				border-radius : 50%;
+				margin-top:10px
+			}
+			p {
+				color : $fontColor;
+			}
+		}
+	}
+
+	/** END OF ABOUT **/	
 	
 	/** BOOTSTRAP TWEEKING **/
 	
@@ -285,14 +321,27 @@ footer {
 		    margin: 0;
 		    padding: 0;
 		}
+
+		.gm-style-iw {
+			background-color: #000; 
+			
+			#mapContent {
+				color: $homeFontColor;
+				background-color: #000; 
+				font-family: $mainFontFamily;
+			}
+		}
+
+
 	}
 
 	.separator {
-		@include default-border(2px, bottom);
+		@include colored-border(2px, bottom, rgba(200, 200, 200, 0.5));
 		height:1px;
 		background-color: rgb(211, 211, 211);
 		margin-top : 15px;
 		margin-bottom:15px;
+		width:20px;
 	}
 
 	#homeCarousel { 

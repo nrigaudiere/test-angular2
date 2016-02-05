@@ -37,8 +37,8 @@ var jsFilesToInject = [
   // Loading JQuery
   'js/dependencies/jquery/dist/jquery.min.js',
 
-  //Loading JQuery pluginq
-  'js/dependencies/instagram/instagram.js',
+  //Loading JQuery plugin
+  'js/dependencies/socials/socialstream.jquery.js',
 
   //Loading custom JQuery
   'js/custom/customJQuery.js',
