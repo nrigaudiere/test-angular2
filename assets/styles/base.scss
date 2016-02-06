@@ -21,7 +21,8 @@ $medium             : 1em;
 $mediumlg           : 2em;
 $large              : 2.5em;
 $xlarge             : 3em;
-$xxlarge            : 4em;
+$xxlarge            : 3.5em;
+$xxxlarge            : 4em;
 
 
 /* Fonts */
@@ -184,7 +185,7 @@ footer {
 		}
 
 		h1 {
-			font-size:$xxlarge;
+			font-size:$xxxlarge;
 			margin-top:30vh;
 		}
 
@@ -287,7 +288,8 @@ footer {
 				border:0;
 			    @include colored-border(2px, top, rgba(200, 200, 200, 0.5));
 			    display: inline-block;
-			    width: 65px;
+			    // width: 65px;
+			    width:3.5vw;
 			    margin: 4px 10px 4px 10px;
 			}
 		}
@@ -314,6 +316,7 @@ footer {
 		.flickr-feed {
 			li {
 				display:inline-block;
+				margin:3px;
 			}
 
 			.flickr-list {
@@ -428,18 +431,23 @@ footer {
 		
 		div {
 			display:inline-block;
-			font-size: $xsmall;
+			font-size: $xxsmall;
 			cursor:pointer;
+			margin-right : 10px;
+			margin-left : 10px;
 
 			@include default-border(2px, bottom);
 			
-			// margin:10px;
-			
-			span {
-				font-size : $xlarge;
+			span:nth-child(1) {
+				font-size : $xxlarge;
 				float: left;
 			}
 			
+			span:nth-child(2) {
+			    float: right;
+			    padding: 13px 25px 0px 10px;
+			    text-align: left;
+			}
 		}
 
 		.active {
@@ -503,4 +511,4 @@ footer {
 
 	}
 
-	/** END OF MISC **/
+	/** END OF MISC */

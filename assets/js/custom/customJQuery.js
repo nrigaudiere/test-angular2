@@ -38,22 +38,6 @@ $(document).ready(function() {
 	$('#testimonialCarousel').carousel({interval: 3000});
 
 
-
-
-	// Instagram
-	// $('.instagram').on('willLoadInstagram', function(event, options) {
-	// 	console.log(options);
-	// });
-	// $('.instagram').on('didLoadInstagram', function(event, response) {
-	// 	console.log(response);
-	// });
-	// $('.instagram').instagram({
-	// 	hash: 'photographer',
-	// 	clientId:'5e17e41d90ec4613ad722af6cc0f8f1e',
-	// 	// code:'ab74a752bf5e4171a06f499f80db52de'
-	// 	accessToken: '2896544984.5e17e41.13df3b4f314048a6ad5a001a1dc7f379'
-	// });
-	
 	/* ==== Flickr ==== */
 	$('.flickr-feed').socialstream({
 	    socialnetwork: 'flickr',
@@ -64,7 +48,7 @@ $(document).ready(function() {
 	/* ==== Instagram ==== */
 	$('.instagram-feed').socialstream({
 	    socialnetwork: 'instagram',
-	    limit: 9,
+	    limit: 15,
 	    username: 'mickjagger'
 	})
 
