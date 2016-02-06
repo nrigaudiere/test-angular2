@@ -58,15 +58,17 @@ $(document).ready(function() {
 	$('.flickr-feed').socialstream({
 	    socialnetwork: 'flickr',
 	    limit: 6,
-	    username: 'daisyduck2007'
+	    username: 'Mrky1'
 	})
 
 	/* ==== Instagram ==== */
 	$('.instagram-feed').socialstream({
 	    socialnetwork: 'instagram',
-	    limit: 15,
-	    username: 'notreble'
+	    limit: 9,
+	    username: 'mickjagger'
 	})
+
+	$('.instagram-list').addClass('no-margins');
 
 
 });
@@ -89,14 +91,13 @@ function initMap() {
 		zoom: 16
 	});
 
-	var contentString = '<div id="mapContent">BANANA BREAD</div>';
-
-	var infowindow=new google.maps.InfoWindow({
-			content:contentString,
-			position: myLatLng
-		});
-	
-	infowindow.open(map);
+	var marker = new google.maps.Marker({
+		position: myLatLng, 
+		map: map,
+		draggable:false,
+		icon: '../../images/ressources/marker.png',
+		title: 'BANANA BREAD'
+	});
 
 }
 

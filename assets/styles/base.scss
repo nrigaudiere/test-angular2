@@ -152,20 +152,6 @@ footer {
 	/**------------**/
 	/** END OF NAV **/
 	/**------------**/
-	
-	/**----------**/
-	/** SECTIONS **/
-	/**----------**/
-	
-	#home {
-		background-color:transparent;
-	}
-
-	#parallax {
-		@include background-fixed('../images/backgrounds/parallax.jpg');
-		    
-		height: 65vh;
-	}
 
 	#testimonials {
 		background-color: rgb(242, 242, 242);
@@ -175,9 +161,17 @@ footer {
 	/** END OF SECTIONS **/
 	/**-----------------**/
 
-	/**------**/
+
+	
+	/**----------**/
+	/** SECTIONS **/
+	/**----------**/
+
 	/** HOME **/
-	/**------**/
+	
+	#home {
+		background-color:transparent;
+	}
 
 	hometitle {
 		text-align:center;
@@ -245,14 +239,46 @@ footer {
 	/** TESTIMONIALS **/	
 	
 	#testimonials {
-		
+
+		.carousel {
+			margin-top:30px;
+		}
+
+		.carousel-inner {
+			blockquote p {
+				font-size: $small;
+			}
+		}
+		.quote {
+			margin: 0px 10px;
+		}
+
+		.fa-quote-left {
+			float: left ;
+		}
+
+		.fa-quote-right {
+			float: right ;
+		}
 	}
 
 	/** END OF TESTIMONIALS **/	
 	
+	/** PARALLAX **/	
+
+	#parallax {
+		@include background-fixed('../images/backgrounds/parallax.jpg');
+		    
+		height: 65vh;
+	}
+
+	/** END OF PARALLAX **/	
+
 	/** ABOUT **/	
 	
 	#about {
+
+		height:initial;
 
 		h4 {
 			display: inline-block;
@@ -274,6 +300,29 @@ footer {
 			p {
 				color : $fontColor;
 			}
+		}
+
+		.instagram-feed {
+			white-space: nowrap;
+			overflow:hidden;
+			
+			li {
+				display:inline-block;
+			}
+		}
+
+		.flickr-feed {
+			li {
+				display:inline-block;
+			}
+
+			.flickr-list {
+				padding:0;
+			}
+		}
+
+		.about-content {
+			margin-top:40px;
 		}
 	}
 
@@ -321,25 +370,13 @@ footer {
 		    margin: 0;
 		    padding: 0;
 		}
-
-		.gm-style-iw {
-			background-color: #000; 
-			
-			#mapContent {
-				color: $homeFontColor;
-				background-color: #000; 
-				font-family: $mainFontFamily;
-			}
-		}
-
-
 	}
 
 	.separator {
 		@include colored-border(2px, bottom, rgba(200, 200, 200, 0.5));
 		height:1px;
 		background-color: rgb(211, 211, 211);
-		margin-top : 15px;
+		margin-top : 25px;
 		margin-bottom:15px;
 		width:20px;
 	}
@@ -443,6 +480,10 @@ footer {
 				> li {
 					background-color: #e84a64;
 					border: none;
+				}
+
+				li .active {
+					background-color: $hoverColor; 
 				}
 			}
 		}

@@ -67,7 +67,28 @@ module.exports = function(grunt) {
 						'bootstrap/mixins/*.scss'
 					],
 				dest: './assets/styles'
+			},
+
+			//Add Font Awesome files 
+			{
+				expand:true,
+				cwd: './node_modules/font-awesome/',
+				src:[
+						'scss/*.scss'
+					],
+				dest: './assets/styles/font-awesome'
+			},
+
+			//Add Font Awesome font files
+			{
+				expand:true,
+				cwd: './node_modules/font-awesome/fonts/',
+				src:[
+						'*'
+					],
+				dest: './assets/fonts'
 			}
+
 			]
 		},
 		build: {
