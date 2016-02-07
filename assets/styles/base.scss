@@ -12,17 +12,19 @@ $fontColor 			: #000;
 $homeFontColor 	    : #fff;
 $hoverColor         : #ddd;
 $grey               : #777;
+$inputColor         : rgb(150, 150, 150);
 
 $xxsmall            : 0.5em;
 $xsmall             : 0.6em;
 $xmsmall            : 0.7em;
 $small              : 0.8em;
+$smedium            : 0.9em;
 $medium             : 1em;
 $mediumlg           : 2em;
 $large              : 2.5em;
 $xlarge             : 3em;
 $xxlarge            : 3.5em;
-$xxxlarge            : 4em;
+$xxxlarge           : 4em;
 
 
 /* Fonts */
@@ -61,14 +63,43 @@ a:hover , a:focus {
 	color : $hoverColor;
 }
 
-input {
-	@include border-radius(5px);
+input, textarea {
+	@include border-radius(1px);
+	font-size: $xsmall; 
+	font-weight: 100;
+	color: $inputColor;
+	 
+	padding: 12px 20px !important;
+	margin: 10px;
+	background-color: transparent;
+	@include colored-border(1px, all, $hoverColor);
+	@include transition(border-color, 0.15s, ease-in-out);
+    @include transition(box-shadow, 0.15s, ease-in-out);
+    
+
+    @include placeholders(rgba(200, 200, 200, 0.8), $smedium, 2px);
 }
 
+input:focus, textarea:focus {
+	border-color: #203E97;
+    outline: 0;
+    @include default-box-shadow(#203E97);
+}
+
+textarea {
+	resize: none;
+	height:12em;
+}
+
+
 button {
-	@include border-radius(2px);
-	background:none;
-	border: solid 2px rgba(255,255,255,0.5);
+	@include border-radius(1px);
+	background-color:rgb(225,225,225);
+	
+	@include default-border(1px, all);
+	font-size: $xsmall; 
+	color:$homeFontColor;
+	padding: 12px 24px;
 }
 
 section {
@@ -116,399 +147,3 @@ footer {
 
 
 
-	/** NAV **/
-
-	nav {
-		a {
-			font-size: $xsmall;
-			color: $homeFontColor;
-			font-weight:100;
-		}
-		a:hover, a:focus {
-			background-color: transparent !important; 
-		}
-
-		img {
-			padding-top: 5px;
-		}
-
-		ul li:nth-child(4) a {
-			padding:0px !important;
-		}
-
-		li {
-			padding: 10px;
-		}
-	}
-
-	.navbar-nav {
-		@include default-border(1px, bottom);
-	}
-
-	.navbar-scrolled {
-		@include gradient-vertical($start-color: #555, $end-color: transparent, $start-percent: 0%, $end-percent: 100%);
-		transition: all 1.5s ease-in-out;
-	}
-
-	/**------------**/
-	/** END OF NAV **/
-	/**------------**/
-
-	#testimonials {
-		background-color: rgb(242, 242, 242);
-	}
-
-	/**-----------------**/
-	/** END OF SECTIONS **/
-	/**-----------------**/
-
-
-	
-	/**----------**/
-	/** SECTIONS **/
-	/**----------**/
-
-	/** HOME **/
-	
-	#home {
-		background-color:transparent;
-	}
-
-	hometitle {
-		text-align:center;
-		text-transform: uppercase !important;
-		color: $homeFontColor;
-		
-		h1, h2 {
-			letter-spacing:13px;
-			font-family: $mainFontFamilyBold; 
-		}
-
-		h1 {
-			font-size:$xxxlarge;
-			margin-top:30vh;
-		}
-
-		h2 {
-			font-size:$large;
-			margin-top:initial;
-		}
-
-		h4 {
-			font-family: $mainFontFamily;
-		}
-
-		span {
-	    	margin-top: 2em;
-	    	a, a:hover {
-    		color: $homeFontColor !important;
-
-			button {
-				text-transform: uppercase !important;
-				font-size: $xxsmall;
-				padding: 9px 20px 7px 20px;
-			}
-		}
-		}
-		
-	}
-
-	/** END OF HOME **/
-	
-	/** DESCRIPTION **/
-	
-	#description {
-		height: initial;
-
-		img {
-			max-width:100%;
-			width:100%;
-		}
-	}
-
-	/** END OF DESCRIPTION **/
-	
-	/** WORKS **/
-	
-	#works {
-		height: initial;
-
-	}
-
-	/** END OF WORKS **/
-	
-	/** TESTIMONIALS **/	
-	
-	#testimonials {
-
-		.carousel {
-			margin-top:30px;
-		}
-
-		.carousel-inner {
-			blockquote p {
-				font-size: $small;
-			}
-		}
-		.quote {
-			margin: 0px 10px;
-		}
-
-		.fa-quote-left {
-			float: left ;
-		}
-
-		.fa-quote-right {
-			float: right ;
-		}
-	}
-
-	/** END OF TESTIMONIALS **/	
-	
-	/** PARALLAX **/	
-
-	#parallax {
-		@include background-fixed('../images/backgrounds/parallax.jpg');
-		    
-		height: 65vh;
-	}
-
-	/** END OF PARALLAX **/	
-
-	/** ABOUT **/	
-	
-	#about {
-
-		height:initial;
-
-		h4 {
-			display: inline-block;
-			font-size: $xmsmall; 
-			hr {
-				border:0;
-			    @include colored-border(2px, top, rgba(200, 200, 200, 0.5));
-			    display: inline-block;
-			    // width: 65px;
-			    width:3.5vw;
-			    margin: 4px 10px 4px 10px;
-			}
-		}
-
-		.me {
-			img { 
-				border-radius : 50%;
-				margin-top:10px
-			}
-			p {
-				color : $fontColor;
-			}
-		}
-
-		.instagram-feed {
-			white-space: nowrap;
-			overflow:hidden;
-			
-			li {
-				display:inline-block;
-			}
-		}
-
-		.flickr-feed {
-			li {
-				display:inline-block;
-				margin:3px;
-			}
-
-			.flickr-list {
-				padding:0;
-			}
-		}
-
-		.about-content {
-			margin-top:40px;
-		}
-	}
-
-	/** END OF ABOUT **/	
-	
-	/** BOOTSTRAP TWEEKING **/
-	
-	.no-gutters, {
-		margin-right: 0 !important;
-		margin-left: 0 !important;
-
-
-		[class^="col-"],
-		[class*="col-"] {
-			padding-right: 0 !important;
-			padding-left: 0 !important;
-		}
-	}
-
-	.no-margins {
-		padding-right: 0 !important;
-		padding-left: 0 !important;
-		margin-right: 0 !important;
-		margin-left: 0 !important;
-	}
-
-	.active a {
-		color: $grey !important;
-	}
-
-	/** END OF BOOTSTRAP TWEEKING **/
-	
-	/** MISC **/
-	
-	.map-container {
-		position: relative;
-    	width: 100%;
-    	height: 100vh;
-		#map {
-			position: absolute;
-		    top: 0;
-		    right: 0;
-		    bottom: 0;
-		    left: 0;
-		    margin: 0;
-		    padding: 0;
-		}
-	}
-
-	.separator {
-		@include colored-border(2px, bottom, rgba(200, 200, 200, 0.5));
-		height:1px;
-		background-color: rgb(211, 211, 211);
-		margin-top : 25px;
-		margin-bottom:15px;
-		width:20px;
-	}
-
-	#homeCarousel { 
-		z-index: -99;
-		background-color: black;
-		width: 100%;
-		height: 100vh;
-		position: fixed;
-		
-		.item {
-			position: fixed; 
-			opacity: 0;
-			left:0 !important;
-			transition-property: opacity;
-			width: 100%; height: 100vh;
-			
-			@include transition(opacity, 0.5s, ease-in-out);
-			height: 100vh;
-		}
-
-		.one {
-			@include background-fixed('../images/backgrounds/barcelona.jpg');
-		}
-		.two {
-			@include background-fixed('../images/backgrounds/montreal.jpg');
-		}
-		.three {
-			@include background-fixed('../images/backgrounds/marseille.jpg');
-		}
-		.four {
-			@include background-fixed('../images/backgrounds/home.jpg');
-		}
-		.active {
-			opacity: 1 !important;
-		}
-
-		.left {
-			opacity: 1 !important;
-			//@include transition(opacity, 0.5s, ease-out);
-		}
-
-	}
-
-	.carousel-controllers {
-		color : $homeFontColor;
-		margin-top:20vh;
-		
-		div {
-			display:inline-block;
-			font-size: $xxsmall;
-			cursor:pointer;
-			margin-right : 10px;
-			margin-left : 10px;
-
-			@include default-border(2px, bottom);
-			
-			span:nth-child(1) {
-				font-size : $xxlarge;
-				float: left;
-			}
-			
-			span:nth-child(2) {
-			    float: right;
-			    padding: 13px 25px 0px 10px;
-			    text-align: left;
-			}
-		}
-
-		.active {
-			@include colored-border(2px, bottom, $homeFontColor);
-		}
-	}
-
-	.quote {
-	    color: rgba(0,0,0,.1);
-	    text-align: center;
-	    margin-bottom: 30px;
-	}
-
-	#testimonialCarousel {
-
-		.carousel {
-			padding-bottom: 60px;
-
-			.carousel-inner {
-				.item {
-					opacity: 0;
-					-webkit-transition-property: opacity;
-					-ms-transition-property: opacity;
-					transition-property: opacity;
-				}
-
-				.active {
-					opacity: 1;
-					-webkit-transition-property: opacity;
-					-ms-transition-property: opacity;
-					transition-property: opacity;
-				}
-			} 
-
-			.carousel-indicators {
-				bottom: 10px;
-
-				> li {
-					background-color: #e84a64;
-					border: none;
-				}
-
-				li .active {
-					background-color: $hoverColor; 
-				}
-			}
-		}
-
-		blockquote {
-			text-align: center;
-			border: none;
-		}
-
-		.profile-circle {
-			width: 100px;
-			height: 100px;
-			margin: 0 auto;
-			border-radius: 100px;
-		}
-
-
-	}
-
-	/** END OF MISC */

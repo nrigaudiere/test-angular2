@@ -1,0 +1,38 @@
+/**-----**/
+/** NAV **/
+/**-----**/
+nav {
+	a {
+		font-size: $xsmall;
+		color: $homeFontColor;
+		font-weight:100;
+	}
+	a:hover, a:focus {
+		background-color: transparent !important; 
+	}
+
+	img {
+		padding-top: 5px;
+	}
+
+	ul li:nth-child(4) a {
+		padding:0px !important;
+	}
+
+	li {
+		padding: 10px;
+	}
+}
+
+.navbar-nav {
+	@include default-border(1px, bottom);
+}
+
+.navbar-scrolled {
+	@include gradient-vertical($start-color: #555, $end-color: transparent, $start-percent: 0%, $end-percent: 100%);
+	transition: all 1.5s ease-in-out;
+}
+
+/**------------**/
+/** END OF NAV **/
+/**------------**/

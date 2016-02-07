@@ -1,0 +1,187 @@
+
+/**------**/
+/** MISC **/
+/**------**/
+
+/** BOOTSTRAP TWEEKING **/
+
+.no-gutters, {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+
+
+	> [class^="col-"],
+	> [class*="col-"] {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+}
+
+.no-margins {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+
+.active a {
+	color: $grey !important;
+}
+
+/** END OF BOOTSTRAP TWEEKING **/
+
+.map-container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	#map {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    margin: 0;
+	    padding: 0;
+	}
+}
+
+.separator {
+	@include colored-border(2px, bottom, rgba(200, 200, 200, 0.5));
+	height:1px;
+	background-color: rgb(211, 211, 211);
+	margin-top : 25px;
+	margin-bottom:15px;
+	width:20px;
+}
+
+#homeCarousel { 
+	z-index: -99;
+	background-color: black;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	
+	.item {
+		position: fixed; 
+		opacity: 0;
+		left:0 !important;
+		transition-property: opacity;
+		width: 100%; height: 100vh;
+		
+		@include transition(opacity, 0.5s, ease-in-out);
+		height: 100vh;
+	}
+
+	.one {
+		@include background-fixed('../images/backgrounds/barcelona.jpg');
+	}
+	.two {
+		@include background-fixed('../images/backgrounds/montreal.jpg');
+	}
+	.three {
+		@include background-fixed('../images/backgrounds/marseille.jpg');
+	}
+	.four {
+		@include background-fixed('../images/backgrounds/home.jpg');
+	}
+	.active {
+		opacity: 1 !important;
+	}
+
+	.left {
+		opacity: 1 !important;
+		//@include transition(opacity, 0.5s, ease-out);
+	}
+
+}
+
+.carousel-controllers {
+	color : $homeFontColor;
+	margin-top:20vh;
+	
+	div {
+		display:inline-block;
+		font-size: $xxsmall;
+		cursor:pointer;
+		margin-right : 10px;
+		margin-left : 10px;
+
+		@include default-border(2px, bottom);
+		
+		span:nth-child(1) {
+			font-size : $xxlarge;
+			float: left;
+		}
+		
+		span:nth-child(2) {
+		    float: right;
+		    padding: 13px 25px 0px 10px;
+		    text-align: left;
+		}
+	}
+
+	.active {
+		@include colored-border(2px, bottom, $homeFontColor);
+	}
+}
+
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#testimonialCarousel {
+
+	.carousel {
+		padding-bottom: 60px;
+
+		.carousel-inner {
+			.item {
+				opacity: 0;
+				-webkit-transition-property: opacity;
+				-ms-transition-property: opacity;
+				transition-property: opacity;
+			}
+
+			.active {
+				opacity: 1;
+				-webkit-transition-property: opacity;
+				-ms-transition-property: opacity;
+				transition-property: opacity;
+			}
+		} 
+
+		.carousel-indicators {
+			bottom: 10px;
+
+			> li {
+				background-color: #e84a64;
+				border: none;
+			}
+
+			li .active {
+				background-color: $hoverColor; 
+			}
+		}
+	}
+
+	blockquote {
+		text-align: center;
+		border: none;
+	}
+
+	.profile-circle {
+		width: 100px;
+		height: 100px;
+		margin: 0 auto;
+		border-radius: 100px;
+	}
+
+
+}
+
+
+/**-------------**/
+/** END OF MISC **/
+/**-------------**/

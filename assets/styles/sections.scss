@@ -1,0 +1,186 @@
+	
+/**----------**/
+/** SECTIONS **/
+/**----------**/
+
+	/** HOME **/
+	
+	#home {
+		background-color:transparent;
+	}
+
+	hometitle {
+		text-align:center;
+		text-transform: uppercase !important;
+		color: $homeFontColor;
+		
+		h1, h2 {
+			letter-spacing:13px;
+			font-family: $mainFontFamilyBold; 
+		}
+
+		h1 {
+			font-size:$xxxlarge;
+			margin-top:30vh;
+		}
+
+		h2 {
+			font-size:$large;
+			margin-top:initial;
+		}
+
+		h4 {
+			font-family: $mainFontFamily;
+		}
+
+		span {
+	    	margin-top: 2em;
+	    	a, a:hover {
+    		color: $homeFontColor !important;
+
+			button {
+				text-transform: uppercase !important;
+				font-size: $xxsmall;
+				padding: 9px 20px 7px 20px;
+			}
+		}
+		}
+		
+	}
+
+	/** END OF HOME **/
+	
+	/** DESCRIPTION **/
+	
+	#description {
+		height: initial;
+
+		img {
+			max-width:100%;
+			width:100%;
+		}
+	}
+
+	/** END OF DESCRIPTION **/
+	
+	/** WORKS **/
+	
+	#works {
+		height: initial;
+
+	}
+
+	/** END OF WORKS **/
+	
+	/** TESTIMONIALS **/	
+	
+	#testimonials {
+		background-color: rgb(242, 242, 242);
+		
+		.carousel {
+			margin-top:30px;
+		}
+
+		.carousel-inner {
+			blockquote p {
+				font-size: $small;
+			}
+		}
+		.quote {
+			margin: 0px 10px;
+		}
+
+		.fa-quote-left {
+			float: left ;
+		}
+
+		.fa-quote-right {
+			float: right ;
+		}
+	}
+
+	/** END OF TESTIMONIALS **/	
+	
+	/** PARALLAX **/	
+
+	#parallax {
+		@include background-fixed('../images/backgrounds/parallax.jpg');
+		    
+		height: 65vh;
+	}
+
+	/** END OF PARALLAX **/	
+	
+	/** CONTACT **/	
+	
+	#contact {
+		text-align: left;
+		
+		// .no-gutters 
+		
+	}
+
+	/** END OF CONTACT **/	
+	
+
+	/** ABOUT **/	
+	
+	#about {
+
+		height:initial;
+
+		h4 {
+			display: inline-block;
+			font-size: $xmsmall; 
+			hr {
+				border:0;
+			    @include colored-border(2px, top, rgba(200, 200, 200, 0.5));
+			    display: inline-block;
+			    // width: 65px;
+			    width:3.5vw;
+			    margin: 4px 10px 4px 10px;
+			}
+		}
+
+		.me {
+			img { 
+				border-radius : 50%;
+				margin-top:10px
+			}
+			p {
+				color : $fontColor;
+			}
+		}
+
+		.instagram-feed {
+			white-space: nowrap;
+			overflow:hidden;
+			
+			li {
+				display:inline-block;
+			}
+		}
+
+		.flickr-feed {
+			li {
+				display:inline-block;
+				margin:3px;
+			}
+
+			.flickr-list {
+				padding:0;
+			}
+		}
+
+		.about-content {
+			margin-top:40px;
+		}
+	}
+
+	/** END OF ABOUT **/	
+	
+
+/**-----------------**/
+/** END OF SECTIONS **/
+/**-----------------**/
+

@@ -24,6 +24,11 @@
 	}
 }
 
+@mixin default-box-shadow($color) {
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $color;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $color;
+}
+
 @mixin background-fixed($url) {
 	background: url($url) no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -38,4 +43,28 @@
 	-ms-transition: $type $duration $anim !important;
 	-o-transition: $type $duration $anim !important;
 	transition: $type $duration $anim !important;
+}
+
+
+@mixin placeholders($color, $fsize, $letspacing ) {
+	&::-webkit-input-placeholder {
+		color: $color;
+		font-size : $fsize;
+		letter-spacing: $letspacing;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		font-size : $fsize;
+		letter-spacing: $letspacing;
+	}
+	&:-moz-placeholder {   /* Older versions of Firefox */
+		color: $color;
+		font-size : $fsize;
+		letter-spacing: $letspacing;
+	}
+	&:-ms-input-placeholder { 
+		color: $color;
+		font-size : $fsize;
+		letter-spacing: $letspacing;
+	}
 }
