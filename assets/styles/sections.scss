@@ -114,10 +114,16 @@
 	/** CONTACT **/	
 	
 	#contact {
-		text-align: left;
-		
-		// .no-gutters 
-		
+
+		text-align: left !important;
+
+		.contact-text {
+			padding:0px !important;
+			
+			h2 {
+				text-align: left !important;
+			}
+		}
 	}
 
 	/** END OF CONTACT **/	

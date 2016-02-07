@@ -31,8 +31,17 @@ var jsFilesToInject = [
   'js/dependencies/angular2/bundles/angular2-polyfills.js',
   'js/dependencies/rxjs/bundles/*.js',
   'js/dependencies/angular2/bundles/angular2-all.umd.js',
-  'js/app/app.component.js',
-  'js/app/boot.js',
+
+    //Loading ng2 Models
+    'js/app/models/contact.js',
+
+    //Loading ng2 Directives
+    'js/app/directives/contact.directive.js',
+
+    // Loading ng2 Core
+
+    'js/app/app.component.js',
+    'js/app/boot.js',
 
   // Loading JQuery
   'js/dependencies/jquery/dist/jquery.min.js',

@@ -16,13 +16,15 @@
 	.Class({
 		constructor: function() {
 			this.posts = ["Post1", "Post2", "Post3", "Post4"];
+			// console.log(this.http.get('http://localhost:1337/blogPosts'));
 		}
 	});
 
 	app.contactForm =
 	ng.core.Component({
 		selector : 'contactform',
-		templateUrl : 'templates/contactform.component.html'
+		template : '<contact></contact>',
+		directives: [app.ContactComponent]
 	})
 	.Class({
 		constructor: function() {}, 
