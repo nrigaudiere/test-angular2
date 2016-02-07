@@ -27,11 +27,7 @@
 		directives: [app.ContactComponent]
 	})
 	.Class({
-		constructor: function() {}, 
-
-		diagnostic: function() {
-        	return JSON.stringify(this.model);
-      	}
+		constructor: function() {} 
 	});
 
 

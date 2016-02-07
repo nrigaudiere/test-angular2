@@ -12,6 +12,10 @@
 		},
 		onSubmit: function() {
 			this.submitted = true;
-		}
+		}, 
+		
+		diagnostic: function() {
+        	return JSON.stringify(this.model);
+      	}
 	});
 })(window.app || (window.app = {}));
