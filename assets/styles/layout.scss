@@ -8,7 +8,8 @@ $xsmall             : 0.6em;
 $small              : 0.8em;
 $medium             : 1em;
 $large              : 1.5em;
-$xlarge             : 3em;
+$xlarge             : 2em;
+$xxlarge            : 2.5em;
 
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 480px) and (orientation: portrait){
@@ -75,9 +76,19 @@ $xlarge             : 3em;
 
 @media screen and (max-width:1024px) {
 	
-
-	hometitle h1 {
-		font-size: $xlarge;
+	hometitle {
+		h1 {
+			font-size: $xxlarge;
+			margin-top: 20vh;
+		}
+		h2 {
+			font-size: $medium;
+			margin-top: 2vh; 
+		}
+		h4 {
+			font-size: $small;
+			margin-top: 6vh; 
+		}
 	}
 
 	.icon-bar {
