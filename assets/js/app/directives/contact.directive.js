@@ -7,13 +7,13 @@
 	})
 	.Class({
 		constructor: function() {
-			this.model = new app.Contact('Name', 'Email', 'Message');
+			this.model = new app.Contact('', '', '');
 			this.submitted = false;
 		},
 		onSubmit: function() {
 			this.submitted = true;
 		}, 
-		
+
 		diagnostic: function() {
         	return JSON.stringify(this.model);
       	}

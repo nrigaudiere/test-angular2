@@ -15,9 +15,39 @@
 	})
 	.Class({
 		constructor: function() {
-			this.posts = ["Post1", "Post2", "Post3", "Post4"];
-			// console.log(this.http.get('http://localhost:1337/blogPosts'));
-		}
+
+
+			this.posts = "";
+			var options = new ng.http.BaseRequestOptions();
+			var backend = new ng.http.ConnectionBackend();
+			this.http = new ng.http.Http(backend, options);
+		},
+
+		ngOnInit: function() {
+			this.posts = this.getPosts();
+			console.log(this.posts)
+		},
+
+		getPosts: function(){
+
+			console.log(ng);
+			console.log(this.http);
+
+        	return this.http.get('http://localhost:1337/work');
+            // .map(response => response.json().data);
+            
+
+     //     var options = new ng.http.BaseRequestOptions();
+     //     var reqM    = ng.http.RequestMethod.Get;
+     //     var req = new Request(options.merge({
+					// 	  method: reqM,
+					// 	  url: 'http://localhost:1337/work'
+					// }));
+
+
+     //     console.log(req);
+     //     // console.log('req.method:', RequestMethods[req.method]); 
+    	}
 	});
 
 	app.contactForm =
@@ -27,7 +57,10 @@
 		directives: [app.ContactComponent]
 	})
 	.Class({
-		constructor: function() {} 
+		constructor: function() {
+
+		} 
+
 	});
 
 
