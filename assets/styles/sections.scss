@@ -152,7 +152,7 @@
 			    @include colored-border(2px, top, rgba(200, 200, 200, 0.5));
 			    display: inline-block;
 			    // width: 65px;
-			    width:3.5vw;
+			    width:4vw;
 			    margin: 4px 10px 4px 10px;
 			}
 		}
@@ -189,6 +189,17 @@
 
 		.about-content {
 			margin-top:40px;
+			
+			.about-text {
+					text-align: left;
+					font-size: $small;
+					margin-left: 30px;
+    				margin-top: 8px; 
+				time {
+					color: $inputColor;
+					font-size: $xsmall;
+				}
+			}
 		}
 	}
 
