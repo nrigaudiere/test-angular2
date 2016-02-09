@@ -8,6 +8,78 @@
 		constructor: function() {}
 	});
 
+
+	app.works = ng.core
+	.Component({
+		selector : 'works',
+		templateUrl : 'templates/works.component.html',
+		providers: [ng.http.HTTP_PROVIDERS]
+	})
+	.Class({
+		constructor: [ng.http.Http, function(http) {
+			this.http = http;
+		}],
+
+		ngOnInit: function() {
+
+			this.getWorks().subscribe(
+				function(result){
+					this.works = result;
+
+					this.numberOfWorks = this.works.length;
+
+					console.log(this.works);
+				}.bind(this)
+			);
+
+		},
+
+		getWorks: function() {
+
+        	return this.http.get('http://localhost:1337/work').map(function (res) {
+              return res.json();
+          });
+            
+    	}
+	});
+
+
+
+	app.testimonials = ng.core
+	.Component({
+		selector : 'testimonials',
+		templateUrl : 'templates/testimonials.component.html',
+		providers: [ng.http.HTTP_PROVIDERS]
+	})
+	.Class({
+		constructor: [ng.http.Http, function(http) {
+			this.http = http;
+		}],
+
+		ngOnInit: function() {
+
+			this.getTestimonials().subscribe(
+				function(result){
+					this.testimonials = result;
+
+					this.numberOfTestimonials = this.testimonials.length;
+
+					console.log(this.testimonials);
+				}.bind(this)
+			);
+
+		},
+
+		getTestimonials: function() {
+
+        	return this.http.get('http://localhost:1337/testimonials').map(function (res) {
+              return res.json();
+          });
+            
+    	}
+	});
+
+
 	app.blogPosts = ng.core
 	.Component({
 		selector : 'blogposts',

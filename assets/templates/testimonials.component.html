@@ -1,0 +1,25 @@
+<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+	<div class="carousel slide" id="testimonialCarousel" data-ride="carousel" data-interval="3000">
+		<!-- Carousel indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+			<li *ngFor='#t of testimonials; #i=index' data-target="#testimonialCarousel" data-slide-to=""></li>
+		</ol>
+
+		<!-- Carousel items -->
+		<div class="carousel-inner">
+			<div *ngFor='#testimonial of testimonials; #i=index' class="item" [ngClass]="{ 'active' : i == 0 }">
+
+				<img src="{{testimonial.pictureUrl}}" class="profile-circle" alt="{{testimonial.name}}">
+				<div class="name text-uppercase">{{testimonial.name}}</div>
+				<blockquote>
+					<p>
+						<i class="fa fa-quote-left fa-2x quote"></i>
+						{{testimonial.content}}
+						<i class="fa fa-quote-right fa-2x quote"></i>
+					</p>
+				</blockquote>	
+			</div>
+		</div>
+	</div>
+</div>	

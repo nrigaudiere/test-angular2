@@ -69,6 +69,13 @@
 	
 	#works {
 		height: initial;
+		
+		works {
+			img {
+				max-width:100%;
+				width:100%;
+			}
+		}
 
 	}
 
@@ -86,6 +93,11 @@
 		.carousel-inner {
 			blockquote p {
 				font-size: $small;
+			}
+
+			.name {
+				font-size: $small;
+				margin-top:15px;
 			}
 		}
 		.quote {
@@ -106,6 +118,8 @@
 	/** BLOGPOSTS **/	
 
 	#blogPosts {
+
+		height: initial;
 		
 		blogposts {
 
