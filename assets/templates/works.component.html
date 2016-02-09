@@ -1,9 +1,15 @@
 
-<div *ngFor='#work of works ; #i = index; #o = odd; #e : even' [ngClass]="{'col-lg-(numberOfWorks-1)': o == true, 'col-lg-(numberOfWorks-1) col-lg-offset-1' : e == true}">
-	<img src="{{work.pictureUrl}}" alt="{{work.name}}">
+<div *ngFor='#work of works ; #i = index; #o = odd; #e = even' class="col-lg-{{numberOfWorks-1}} " [ngClass]="{'col-lg-offset-1' : e == true}">
+
+	<div class="work-content">
+		<img src="{{work.pictureUrl}}" alt="{{work.name}}">
+		<div class="work-text">
+			{{work.content}}
+		</div>
+	</div>
 
 	<div>
 		<h3>{{work.name}}</h3>	
-		{{work.category}}
+		<div class="work-category">{{work.category}}</div>
 	</div>
 </div>
