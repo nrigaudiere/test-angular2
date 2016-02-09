@@ -8,46 +8,18 @@
 		constructor: function() {}
 	});
 
-	app.blogPosts = 
-	ng.core.Component({
+	app.blogPosts = ng.core
+	.Component({
 		selector : 'blogposts',
-		template : "<div class='col-lg-12'><p *ngFor='#post of posts'>{{post}}</p></div>"
+		template : "<div class='col-lg-12'><p *ngFor='#post of posts'>{{post}}</p></div>",
+		providers: [ng.http.HTTP_PROVIDERS]
 	})
 	.Class({
-		constructor: function() {
-
+		constructor: [ng.http.Http, function(http) {
 
 			this.posts = "";
-			var options = new ng.http.BaseRequestOptions();
-			var backend = new ng.http.ConnectionBackend();
-			this.http = new ng.http.Http(backend, options);
-		},
-
-		ngOnInit: function() {
-			this.posts = this.getPosts();
-			console.log(this.posts)
-		},
-
-		getPosts: function(){
-
-			console.log(ng);
-			console.log(this.http);
-
-        	return this.http.get('http://localhost:1337/work');
-            // .map(response => response.json().data);
-            
-
-     //     var options = new ng.http.BaseRequestOptions();
-     //     var reqM    = ng.http.RequestMethod.Get;
-     //     var req = new Request(options.merge({
-					// 	  method: reqM,
-					// 	  url: 'http://localhost:1337/work'
-					// }));
-
-
-     //     console.log(req);
-     //     // console.log('req.method:', RequestMethods[req.method]); 
-    	}
+			this.http = http;
+		}]
 	});
 
 	app.contactForm =

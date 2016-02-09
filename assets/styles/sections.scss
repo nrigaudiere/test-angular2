@@ -200,6 +200,10 @@
 					font-size: $xsmall;
 				}
 			}
+
+			.row [class^="col-"]:nth-child(2), .row [class^="col-"]:nth-child(3) {
+				margin-bottom: 85px;
+			}
 		}
 	}
 

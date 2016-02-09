@@ -101,3 +101,19 @@ $xxlarge            : 2.5em;
 @media screen and (min-width: 1024px){
   /* some CSS here */
 }
+
+
+@media screen and (max-width : 1200px) {
+	#about {
+		hr {
+			width: 10vw !important;
+			@include transition(all, 2s, ease-in-out);
+		}
+
+		.about-content {
+			.about-text {
+				margin-left: 7vw;
+			}
+		}
+	}
+}
