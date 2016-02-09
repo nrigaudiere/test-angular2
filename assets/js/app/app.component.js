@@ -11,15 +11,36 @@
 	app.blogPosts = ng.core
 	.Component({
 		selector : 'blogposts',
-		template : "<div class='col-lg-12'><p *ngFor='#post of posts'>{{post}}</p></div>",
+		templateUrl : 'templates/blogposts.component.html',
 		providers: [ng.http.HTTP_PROVIDERS]
 	})
 	.Class({
 		constructor: [ng.http.Http, function(http) {
-
-			this.posts = "";
 			this.http = http;
-		}]
+		}],
+
+		ngOnInit: function() {
+
+			this.getPosts().subscribe(
+				function(result){
+					this.posts = result;
+					this.posts.pop();
+
+					this.numberOfPosts = this.posts.length;
+
+					console.log(this.posts);
+				}.bind(this)
+			);
+
+		},
+
+		getPosts: function() {
+
+        	return this.http.get('http://localhost:1337/blogPosts').map(function (res) {
+              return res.json();
+          });
+            
+    	}
 	});
 
 	app.contactForm =

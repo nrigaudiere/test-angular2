@@ -1,0 +1,23 @@
+<div class='col-lg-12'>
+	
+	<div class="row">
+		<div *ngFor='#post of posts ; #i = index' class="col-lg-{{numberOfPosts-1}}">
+			<img src="{{post.pictureUrl}}" alt="{{post.title}}">
+			
+			<div>
+				{{post.title}}
+			</div>
+
+			<time>{{post.createdAt}}</time>
+
+			{{post.category}}
+
+			<div class="separator center-block"></div>
+
+			<div>
+				{{post.content}}
+			</div>
+		</div>
+
+	</div>
+</div>
