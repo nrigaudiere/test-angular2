@@ -5,8 +5,10 @@
 
 $xxsmall            : 0.5em;
 $xsmall             : 0.6em;
+$xmsmall            : 0.7em;
 $small              : 0.8em;
 $medium             : 1em;
+$xmedium            : 1.1em;
 $large              : 1.5em;
 $xlarge             : 2em;
 $xxlarge            : 2.5em;
@@ -128,6 +130,12 @@ $xxlarge            : 2.5em;
 	#home {
 		.carousel-controllers {
 			margin-top: 10vh;
+			font-size: $xmsmall;
+			
+			div span:nth-child(2) {
+				font-size:  $xmedium;
+				padding-top: 7px;
+			}
 		}
 	}
 
@@ -149,6 +157,14 @@ $xxlarge            : 2.5em;
 
 /* #### iPhone 4+ Portrait or Landscape #### */
 @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+	
+	section {
+		h2 {
+		    font-size: $large;
+		}
+	}
+
+
 	hometitle {
 		h1 {
 			font-size: $xlarge;
