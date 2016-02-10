@@ -194,9 +194,15 @@
 	/** END OF BLOGPOSTS **/	
 	
 	/** PARALLAX **/	
-
-	#parallax {
+	
+	section:nth-child(4) {
 		@include background-fixed('../images/backgrounds/parallax.jpg');
+		    
+		height: 65vh;
+	}
+
+	section:nth-child(7) {
+		@include background-fixed('../images/backgrounds/parallax2.jpg');
 		    
 		height: 65vh;
 	}

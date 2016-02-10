@@ -2,6 +2,8 @@
 /** NAV **/
 /**-----**/
 nav {
+	background-color:transparent;
+	
 	a {
 		font-size: $xsmall;
 		color: $homeFontColor;
@@ -29,8 +31,25 @@ nav {
 }
 
 .navbar-scrolled {
-	@include gradient-vertical($start-color: #555, $end-color: transparent, $start-percent: 0%, $end-percent: 100%);
-	transition: all 1.5s ease-in-out;
+	// @include gradient-vertical($start-color: #555, $end-color: transparent, $start-percent: 0%, $end-percent: 100%);
+	background-color: rgba(150, 150, 150, 0.6);
+	transition: all 1s ease-in-out;
+	
+	height:40px;
+	ul {
+
+		border:0;	
+		li a {
+			padding-top: 4px;
+		}
+
+		li:nth-child(4) {
+			position: absolute;
+			left:10px;
+			top: 0px;
+    		padding-top: 0px;
+		}
+	}
 }
 
 /**------------**/
