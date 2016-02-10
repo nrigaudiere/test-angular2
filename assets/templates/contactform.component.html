@@ -1,16 +1,16 @@
 <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
 
 	<div class="row">
-		<input type="text" placeholder="NAME*" required class="col-lg-4 col-lg-offset-2" [(ngModel)]="model.name" ngControl="name" #name="ngForm">
+		<input type="text" placeholder="NAME*" required class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-11 col-xs-11" [(ngModel)]="model.name" ngControl="name" #name="ngForm">
 
-		<input type="email" placeholder="EMAIL*" required class="col-lg-4" [(ngModel)]="model.email" ngControl="email" #spy>
+		<input type="email" placeholder="EMAIL*" required class="col-lg-4 col-md-4 col-sm-11 col-xs-11" [(ngModel)]="model.email" ngControl="email" #spy>
 	</div>
 	<div class="row">
-		<textarea placeholder="MESSAGE*" required class="col-lg-8 col-lg-offset-2"  [(ngModel)]="model.message" ngControl="message" ></textarea>
+		<textarea placeholder="MESSAGE*" required class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-11 col-xs-11"  [(ngModel)]="model.message" ngControl="message" ></textarea>
 	</div>
 	<div class="row">
-		<button type="submit" class="col-lg-2 col-lg-offset-2" [disabled]="!contactForm.form.valid">SEND</button>
-		<span [hidden]="!submitted" class="formSent col-lg-8">Your message has been sent</span>
+		<button type="submit" class="col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2 col-sm-4 col-xs-4" [disabled]="!contactForm.form.valid">SEND</button>
+		<span [hidden]="!submitted" class="formSent col-lg-8 col-md-8 col-sm-7 col-xs-7">Your message has been sent</span>
 	</div>
 
 </form>
