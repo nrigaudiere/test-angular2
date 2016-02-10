@@ -152,18 +152,26 @@
 			}
 		} 
 
-		.carousel-indicators {
-			bottom: 10px;
+	}
 
-			> li {
-				background-color: #e84a64;
-				border: none;
-			}
 
-			li .active {
-				background-color: $hoverColor; 
-			}
+	.carousel-indicators {
+		bottom: 10px;
+
+		.active {
+			background-color: #aaa; 
+			width: 10px !important;
+			height: 10px !important;
+			margin-bottom: -1px;
 		}
+	}
+
+	.carousel-i {
+		border: none;
+		width: 7px !important;
+		height: 7px !important;
+		background-color: $hoverColor;
+		margin: 0px 7px;
 	}
 
 	blockquote {

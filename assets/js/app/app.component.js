@@ -62,7 +62,7 @@
 					this.testimonials = result;
 
 					this.numberOfTestimonials = this.testimonials.length;
-
+					console.log(this.testimonials);
 				}.bind(this)
 			);
 

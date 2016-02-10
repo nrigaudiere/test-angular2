@@ -23,12 +23,7 @@ $xxlarge            : 2.5em;
 
 /* #### Mobile Phones Portrait or Landscape #### */
 @media screen and (max-device-width: 640px){
-  /* some CSS here */
-}
-
-/* #### iPhone 4+ Portrait or Landscape #### */
-@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-  /* some CSS here */
+  
 }
 
 /* #### iPhone 5 Portrait or Landscape #### */
@@ -47,32 +42,29 @@ $xxlarge            : 2.5em;
 }
 
 
-@media screen and (max-width:768px) {
-	
-	.navbar-brand {
-		padding:10px 15px;
-		
-		img {
-			padding:0px;	
+
+
+
+@media screen and (max-width : 1200px) {
+	#about {
+		hr {
+			width: 10vw !important;
+			@include transition(all, 2s, ease-in-out);
+		}
+
+		.about-content {
+			.about-text {
+				margin-left: 7vw;
+			}
 		}
 	}
 }
 
-@media screen and (min-width: 768px) {
-	.navbar-brand {
-		display: none;
-	} 
-
-	.navbar {
-		text-align: center;
-	}
-
-	.navbar-nav {
-		display: inline-block;
-		float: none;
-		vertical-align: top;
-	}
+/* #### Desktops #### */
+@media screen and (min-width: 1024px){
+  /* some CSS here */
 }
+
 
 @media screen and (max-width:1024px) {
 	
@@ -97,23 +89,78 @@ $xxlarge            : 2.5em;
 	}
 
 }
-/* #### Desktops #### */
-@media screen and (min-width: 1024px){
-  /* some CSS here */
+
+@media screen and (min-width: 768px) {
+	.navbar-brand {
+		display: none;
+	} 
+
+	.navbar {
+		text-align: center;
+	}
+
+	.navbar-nav {
+		display: inline-block;
+		float: none;
+		vertical-align: top;
+	}
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-width:768px) {
+	
+
+	nav {
+		ul li:nth-child(4) {
+			display:none;
+		}
+	}
+
+	.navbar-brand {
+		padding:10px 15px;
+		
+		img {
+			padding:0px;	
+		}
+	}
+
+
+	#home {
+		.carousel-controllers {
+			margin-top: 10vh;
+		}
+	}
+
+	#testimonials {
+		height:initial;
+	}
+
+	#blogPosts {
+		height:initial;
+	}
+
+	#contact {
+		height:initial;
+	}
+
+
 }
 
 
-@media screen and (max-width : 1200px) {
-	#about {
-		hr {
-			width: 10vw !important;
-			@include transition(all, 2s, ease-in-out);
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+	hometitle {
+		h1 {
+			font-size: $xlarge;
+			margin-top: 20vh;
 		}
-
-		.about-content {
-			.about-text {
-				margin-left: 7vw;
-			}
+		h2 {
+			font-size: $small;
+			margin-top: 2vh; 
+		}
+		h4 {
+			font-size: $xsmall;
+			margin-top: 6vh; 
 		}
 	}
 }

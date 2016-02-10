@@ -2,8 +2,7 @@
 	<div class="carousel slide" id="testimonialCarousel" data-ride="carousel" data-interval="3000">
 		<!-- Carousel indicators -->
 		<ol class="carousel-indicators">
-			<li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
-			<li *ngFor='#t of testimonials; #i=index' data-target="#testimonialCarousel" data-slide-to=""></li>
+			<li *ngFor='#t of testimonials; #i= index' data-target="#testimonialCarousel" data-slide-to="1" [ngClass]="{ 'active' : i == 0 }" class="carousel-i"></li>
 		</ol>
 
 		<!-- Carousel items -->
