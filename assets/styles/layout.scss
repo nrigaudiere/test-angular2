@@ -118,11 +118,16 @@ $xxlarge            : 2.5em;
 		}
 	}
 
+	.navbar-scrolled {
+		height: initial;
+	}
+
 	.navbar-brand {
-		padding:10px 15px;
+		padding:8px 15px;
 		
 		img {
-			padding:0px;	
+			padding:0px;
+			width: 2em;	
 		}
 	}
 
@@ -153,6 +158,10 @@ $xxlarge            : 2.5em;
 
 	#testimonials {
 		height:initial;
+		
+		.carousel-inner {
+			height: 90vh;
+		}
 	}
 
 	#blogPosts {
@@ -193,8 +202,43 @@ $xxlarge            : 2.5em;
 			font-size: $xsmall;
     		padding: 12px 18px;
 		}
+	}
 
+	#about {
+		.instagram-feed {
+			
+			img {
+				width: 100px;
+				height: 100px;
+			}
+		}
 
+		.about-content {
+			.about-text {
+				margin-left: 16vw;
+			}
+
+			.flickr-feed {
+				margin-bottom: 30px;
+			}
+
+			.row {
+				[class^="col-"]:nth-child(2), [class^="col-"]:nth-child(3) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	footer {
+		padding-top: 15px;
+		@include colored-border(2px, top, rgba(200, 200, 200, 0.5));
+		
+		small {
+			border: 0;
+			padding: 0;
+			width: 100%;
+		}
 	}
 
 
