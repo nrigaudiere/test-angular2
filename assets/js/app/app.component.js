@@ -28,7 +28,6 @@
 
 					this.numberOfWorks = this.works.length;
 
-					console.log(this.works);
 				}.bind(this)
 			);
 
@@ -64,7 +63,6 @@
 
 					this.numberOfTestimonials = this.testimonials.length;
 
-					console.log(this.testimonials);
 				}.bind(this)
 			);
 
@@ -98,9 +96,21 @@
 					this.posts = result;
 					this.posts.pop();
 
+					for(i=0; i < this.posts.length; i++) {
+
+						var date   = new Date(this.posts[i].createdAt),
+					    	locale = "en-uk",
+					    	day    =  date.getDate(),
+					    	month  = date.toLocaleString(locale, { month: "long" }),
+					    	year   = date.getFullYear();
+
+
+						this.posts[i].createdAt = month + ' ' + day +', ' + year;
+
+					}
+
 					this.numberOfPosts = this.posts.length;
 
-					console.log(this.posts);
 				}.bind(this)
 			);
 

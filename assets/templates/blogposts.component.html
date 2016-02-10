@@ -3,17 +3,18 @@
 		<div *ngFor='#post of posts ; #i = index' class="col-lg-{{numberOfPosts-1}}">
 			<img src="{{post.pictureUrl}}" alt="{{post.title}}">
 			
-			<div>
+			<div class="blog-title">
 				{{post.title}}
 			</div>
 
-			<time>{{post.createdAt}}</time>
+			<div class="blog-timecat text-uppercase">
+				<time>{{post.createdAt}} in</time> {{post.category}}
+			</div>
 
-			{{post.category}}
 
 			<div class="separator center-block"></div>
 
-			<div>
+			<div class="blog-content">
 				{{post.content}}
 			</div>
 		</div>
