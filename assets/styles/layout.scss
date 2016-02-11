@@ -10,6 +10,7 @@ $small              : 0.8em;
 $medium             : 1em;
 $xmedium            : 1.1em;
 $large              : 1.5em;
+$mlarge             : 1.8em;
 $xlarge             : 2em;
 $xxlarge            : 2.5em;
 
@@ -116,10 +117,30 @@ $xxlarge            : 2.5em;
 		ul li:nth-child(4) {
 			display:none;
 		}
+
 	}
 
 	.navbar-scrolled {
 		height: initial;
+		background-color: $navbarColor;
+	}
+
+	.navbar-nav {
+		border:0;
+		text-align: center;
+    	margin-top: 8vh;
+    	font-size: $mlarge;
+    	
+    	li {
+    		padding: 15px;
+    	}
+	}
+
+	.navbar-collapse {
+		max-height: 100vh !important;
+    	height: 100vh;
+    	
+		background-color: $navbarColor;
 	}
 
 	.navbar-brand {
