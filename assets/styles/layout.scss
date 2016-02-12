@@ -46,8 +46,16 @@ $xxlarge            : 2.5em;
 }
 
 /* #### iPhone 6 and 6 plus Portrait or Landscape #### */
-@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
-  /* some CSS here */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	  
+	#testimonials {
+		height:100vh;
+		
+		#testimonialCarousel .carousel-indicators {
+		    bottom: 180px;
+		}
+	}
+	
 }
 
 /* #### Tablets Portrait or Landscape #### */
@@ -165,6 +173,20 @@ $xxlarge            : 2.5em;
 
 
 	#home {
+
+		.one {
+			@include background-fixed('../images/backgrounds/small/barcelona_sm.jpg');
+		}
+		.two {
+			@include background-fixed('../images/backgrounds/small/montreal_sm.jpg');
+		}
+		.three {
+			@include background-fixed('../images/backgrounds/small/marseille_sm.jpg');
+		}
+		.four {
+			@include background-fixed('../images/backgrounds/small/home_sm.jpg');
+		}
+		
 		.carousel-controllers {
 			margin-top: 10vh;
 			font-size: $xmsmall;
@@ -188,6 +210,11 @@ $xxlarge            : 2.5em;
 		}
 	}
 
+
+	section:nth-child(4) {
+		@include background-fixed('../images/backgrounds/small/parallax_sm.jpg');    
+	}
+
 	#testimonials {
 		height:initial;
 		
@@ -198,6 +225,11 @@ $xxlarge            : 2.5em;
 
 	#blogPosts {
 		height:initial;
+	}
+
+
+	section:nth-child(7) {
+		@include background-fixed('../images/backgrounds/small/parallax2_sm.jpg');
 	}
 
 	#contact {
@@ -300,5 +332,9 @@ $xxlarge            : 2.5em;
 			font-size: $xsmall;
 			margin-top: 6vh; 
 		}
+	}
+
+	.navbar-nav li {
+	    padding: 10px;
 	}
 }
