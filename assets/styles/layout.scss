@@ -21,7 +21,18 @@ $xxlarge            : 2.5em;
 
 /* #### Mobile Phones Landscape #### */
 @media screen and (max-device-width: 640px) and (orientation: landscape){
-  /* some CSS here */
+  	#testimonials {
+  		height: 110vw !important;
+  		
+  		.carousel-indicators {
+		    bottom: -22px;
+		}
+  	}
+
+	.navbar-nav li {
+	    padding: 0px !important;
+	    font-size: 0.8em;
+	}
 }
 
 /* #### Mobile Phones Portrait or Landscape #### */

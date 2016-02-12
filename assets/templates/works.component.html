@@ -1,5 +1,5 @@
 
-<div *ngFor='#work of works ; #i = index; #o = odd; #e = even' class="col-lg-{{numberOfWorks-1}}  col-md-{{numberOfWorks-1}} col-sm-12 col-xs-12" [ngClass]="{'col-lg-offset-1 col-md-offset-1 ': e == true}">
+<div *ngFor='#work of works ; #i = index; #o = odd; #e = even' class="col-lg-{{numberOfWorks-1}}  col-md-{{numberOfWorks-1}} col-sm-{{numberOfWorks-1}} col-xs-12" [ngClass]="{'col-lg-offset-1 col-md-offset-1 col-sm-offset-1 ': e == true}">
 
 	<div class="work-content">
 		<img src="{{work.pictureUrl}}" alt="{{work.name}}">
