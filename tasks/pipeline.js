@@ -49,11 +49,11 @@ var jsFilesToInject = [
   //Loading JQuery plugin
   'js/dependencies/socials/socialstream.jquery.js',
 
-  //Loading custom JQuery
-  'js/custom/customJQuery.js',
-
   // Loading Bootstrap
   'js/dependencies/bootstrap-sass/assets/javascripts/bootstrap.js',
+
+  //Loading custom JQuery
+  'js/custom/customJQuery.js',
 
   // Dependencies like jQuery, or Angular are brought in here
   // 'js/dependencies/**/*.js',

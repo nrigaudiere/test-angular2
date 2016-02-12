@@ -3,6 +3,8 @@ var container 		   = $('.main');
 var description 	   = $('#description');
 var reachedDescription = description.offset();
 
+
+/* ==== Scroll & NavBar ==== */
 $('a').click(function() {
   var target = $($.attr(this, 'href'));
 
@@ -19,6 +21,12 @@ $(document).ready(function(){
 			// $(".navbar-fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
 			$(".navbar-fixed-top").removeClass("navbar-scrolled");
 		}
+	});
+});
+
+$(document).ready(function () {
+	$(".navbar-nav li a").click(function(event) {
+		$(".navbar-collapse").collapse('hide');
 	});
 });
 
@@ -89,7 +97,6 @@ $(document).ready(function() {
 
 	google.maps.event.addListenerOnce(map, 'idle', function() {
 		$('#mapContent').parent().css('background-color', 'black');
-		console.log($('#mapContent'));
 		$('#mapContent').closest("div").css('background-color', 'red');
 	});
 });

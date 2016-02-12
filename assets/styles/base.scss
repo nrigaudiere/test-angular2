@@ -12,6 +12,7 @@ $fontColor 			: #000;
 $homeFontColor 	    : #fff;
 $hoverColor         : #ddd;
 $grey               : #777;
+$lightGrey          : #ccc;
 $inputColor         : rgb(150, 150, 150);
 $navbarColor        : rgba(0, 0, 0, 0.85);
 
@@ -94,6 +95,7 @@ textarea {
 	padding-top:12px;
 	resize: none;
 	height:12em;
+	min-width: 70%;
 }
 
 
